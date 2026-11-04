@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Monitoramento</title>  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <b style="color: #ff0000;font-size:35px">Estação de monitoramento</b>
+  <table>
+    <tr>
+      <td style="width:50%">
+        <canvas id="an_gauge_1" data-title="Temperatura" data-units="&deg;C" width="400" height="500"
+          data-major-ticks="-20 -10 0 10 20 30 40 50 60 70" data-type="canv-gauge" data-min-value="-20"
+          data-max-value="70" data-highlights="-20 0 #4D89F2, 0 10 #25B8D9, 10 30 #0BB950, 30 40 #cc5, 40 70 #f33"
+          data-onready="setInterval( function() { 
+                  Gauge.Collection.get('an_gauge_1').setValue(27);
+                }, 200);">
+        </canvas>
+      </td>
+      <td style="width:50%">
+        <canvas id="an_gauge_2" data-title="Umidade" data-units="%" width="400" height="500"
+          data-major-ticks="0 10 20 30 40 50 60 70 80 90" data-type="canv-gauge" data-min-value="0" data-max-value="90"
+          data-highlights="0 12 #ff0000, 12 20 #ff4500, 20 30 #ffff00, 30 40 #90ee90, 40 60 #00bfff, 60 90 #0000ff"
+          data-onready="setInterval( function() { 
+                  Gauge.Collection.get('an_gauge_2').setValue(56);
+                }, 200);">
+        </canvas>
+      </td>
+
+      <td style="width:50%">
+        <canvas id="an_gauge_3" data-title="Vento" data-units="Km/h" width="400" height="500"
+          data-major-ticks="0 10 20 30 40 50 60 70 80 90" data-type="canv-gauge" data-min-value="0" data-max-value="90"
+          data-highlights="0 20 #00ff00, 20 40 #0000ff, 40 60 #ff0000, 60 90 #a47dab"
+          data-onready="setInterval( function() { 
+                  Gauge.Collection.get('an_gauge_3').setValue(10);
+                }, 200);">
+        </canvas>
+      </td>
+    </tr>
+
+  </table>
+  <b style="color: #ff0000;font-size:35px"><span id="datetime"></span></b>
+
+<script src="js/script.js"></script>
+</body>
+</html>

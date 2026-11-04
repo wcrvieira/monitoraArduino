@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    margin: 5;
+    padding: 5;
+    background-color: rgba(72, 72, 72, 0.4);
+}
+
+.text {
+    background-color: #ff0000;
+    font-size: 76px;
+    color: #ffff99;
+}
+
+table {
+    border: 2px solid #ff00ff;
+    background-color: #ffffff;
+    width: 100%;
+    color: #0000ff;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+td {
+    border: 2px solid #ff0000;
+    padding: 16px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
